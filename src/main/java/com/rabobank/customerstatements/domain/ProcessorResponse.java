@@ -1,27 +1,13 @@
 package com.rabobank.customerstatements.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
+@AllArgsConstructor
 public class ProcessorResponse {
-    String result;
-
-    List<ErrorRecord> errorRecords;
-
-    public ProcessorResponse(String result, List<ErrorRecord> errorRecords) {
-        this.result = result;
-        this.errorRecords = errorRecords;
-    }
-
-    public String getResult() { return result; }
-
-    public void setResult(String result) {
-        this.result = result;
-    }
-
-    public List<ErrorRecord> getErrorRecords() { return errorRecords;  }
-
-    public void setErrorRecords(List<ErrorRecord> errorRecords) {
-        this.errorRecords = errorRecords;
-    }
-
+    @Getter @Setter String result;
+    @Getter @Setter List<ErrorRecord> errorRecords;
 }
